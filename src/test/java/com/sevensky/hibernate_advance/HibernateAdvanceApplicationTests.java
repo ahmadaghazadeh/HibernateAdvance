@@ -2,6 +2,8 @@ package com.sevensky.hibernate_advance;
 
 import com.sevensky.hibernate_advance.domain.CreditCard;
 import com.sevensky.hibernate_advance.domain.repository.CreditCardRepository;
+import com.sevensky.hibernate_advance.domain.services.EncryptionService;
+import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,9 @@ class HibernateAdvanceApplicationTests {
 	@Autowired
 	CreditCardRepository creditCardRepository;
 
+	@Autowired
+	EncryptionService encryptionService;
+
 	@Test
 	@Rollback(false)
 	void contextLoads() {
@@ -36,7 +41,16 @@ class HibernateAdvanceApplicationTests {
 
 		CreditCard fetchCreditCard=creditCardRepository.findById(savedCreditCard.getId()).get();
 
-		assertThat(savedCreditCard.getCreditCardNumber()).isEqualTo(fetchCreditCard.getCreditCardNumber());
+		assertThat(savedCreditCard.getCreditCardNumber())
+				.isEqualTo(fetchCreditCard.getCreditCardNumber());
+	}
+
+	@Test
+	void testEncryption() {
+		String encrypted=encryptionService.encrypt(CREDIT_CARD);
+		String decrypted=encryptionService.decrypt(encrypted);
+		assertThat(decrypted).isEqualTo(CREDIT_CARD);
+
 	}
 
 }

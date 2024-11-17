@@ -1,5 +1,6 @@
 package com.sevensky.hibernate_advance.domain;
 
+import com.sevensky.hibernate_advance.domain.interceptors.EncryptedString;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +11,7 @@ public class CreditCard {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @EncryptedString
     private String creditCardNumber;
 
     private String cvv;
