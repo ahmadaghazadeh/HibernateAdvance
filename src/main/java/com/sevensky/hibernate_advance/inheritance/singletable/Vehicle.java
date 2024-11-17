@@ -1,4 +1,4 @@
-package com.sevensky.hibernate_advance.singletable;
+package com.sevensky.hibernate_advance.inheritance.singletable;
 
 
 import jakarta.persistence.*;

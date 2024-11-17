@@ -1,7 +1,8 @@
-package com.sevensky.hibernate_advance.singletable;
+package com.sevensky.hibernate_advance.inheritance.singletable;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
 @DiscriminatorValue("1")

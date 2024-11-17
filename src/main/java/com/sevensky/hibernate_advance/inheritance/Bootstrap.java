@@ -1,7 +1,7 @@
-package com.sevensky.hibernate_advance;
+package com.sevensky.hibernate_advance.inheritance;
 
-import com.sevensky.hibernate_advance.joinedtable.ElectricGuitar;
-import com.sevensky.hibernate_advance.repository.ElectricGuitarRepository;
+import com.sevensky.hibernate_advance.inheritance.joinedtable.ElectricGuitar;
+import com.sevensky.hibernate_advance.inheritance.repository.ElectricGuitarRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

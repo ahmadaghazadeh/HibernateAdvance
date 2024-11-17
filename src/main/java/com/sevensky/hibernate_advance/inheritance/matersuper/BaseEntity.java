@@ -1,4 +1,4 @@
-package com.sevensky.hibernate_advance.matersuper;
+package com.sevensky.hibernate_advance.inheritance.matersuper;
 
 import jakarta.persistence.*;
 

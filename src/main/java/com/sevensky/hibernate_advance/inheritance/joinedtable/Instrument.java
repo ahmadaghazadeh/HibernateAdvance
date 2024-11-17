@@ -1,4 +1,4 @@
-package com.sevensky.hibernate_advance.joinedtable;
+package com.sevensky.hibernate_advance.inheritance.joinedtable;
 
 import jakarta.persistence.*;
 

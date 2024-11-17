@@ -1,6 +1,7 @@
-package com.sevensky.hibernate_advance.tableperclass;
+package com.sevensky.hibernate_advance.inheritance.tableperclass;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity(name = "Dolphin")
 public class Dolphin extends Mammal {

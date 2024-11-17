@@ -1,6 +1,7 @@
-package com.sevensky.hibernate_advance.matersuper;
+package com.sevensky.hibernate_advance.inheritance.matersuper;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
 public class OrderHeader extends BaseEntity{
