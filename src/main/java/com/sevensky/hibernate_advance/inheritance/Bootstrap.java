@@ -5,7 +5,7 @@ import com.sevensky.hibernate_advance.inheritance.repository.ElectricGuitarRepos
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Bootstrap implements CommandLineRunner {
 
 
