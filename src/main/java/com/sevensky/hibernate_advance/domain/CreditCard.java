@@ -4,7 +4,7 @@ import com.sevensky.hibernate_advance.domain.interceptors.EncryptedString;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "credit_card", schema = "INTERCEPTOR")
+@EntityListeners(CreditCardJpaCallback.class)
 public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
