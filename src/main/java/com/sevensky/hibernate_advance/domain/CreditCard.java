@@ -4,16 +4,17 @@ import com.sevensky.hibernate_advance.domain.interceptors.EncryptedString;
 import jakarta.persistence.*;
 
 @Entity
-@EntityListeners(CreditCardJpaCallback.class)
+//@EntityListeners(CreditCardJpaCallback.class)
 public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @EncryptedString
+    //@EncryptedString
+    @Convert(converter = CreditCardConverter.class)
     private String creditCardNumber;
-
+    @Convert(converter = CreditCardConverter.class)
     private String cvv;
 
     private String expirationDate;
